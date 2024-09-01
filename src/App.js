@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Work from './components/Work';
+import Skills from './components/Skills';
+import Testimonials from './components/Testimonials';
+import Map from './components/Map';
+import Footer from './components/Footer';
+import GetQuote from './components/GetQuote'; 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<>
+            <Hero />
+            <Services />
+            <Work />
+            <Skills />
+            <Testimonials />
+            <Map />
+          </>} />
+          <Route path="/quote" element={<GetQuote />} /> 
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

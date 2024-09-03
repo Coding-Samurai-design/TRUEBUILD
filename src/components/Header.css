@@ -28,8 +28,8 @@
 
 .logo {
     font-size: 1.5rem;
+    transition: font-size 0.3s;
 }
-
 
 @media (max-width: 768px) {
     .header {
@@ -48,9 +48,7 @@
     }
 
     .logo {
-        position: relative; 
-        left: 0; 
-        margin-right: auto; 
+        font-size: 1.2rem;
     }
 
     .menu-toggle {

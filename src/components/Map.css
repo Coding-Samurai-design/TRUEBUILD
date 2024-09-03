@@ -1,14 +1,14 @@
 .map-section {
-  padding: 50px 20px; /* Reduced padding for smaller screens */
+  padding: 50px 20px; 
   text-align: center;
 }
 
 .map-container {
   margin: 0 auto;
-  width: 100%; /* Ensure the map takes up full width on smaller screens */
+  width: 100%; 
   max-width: 800px;
   height: 0;
-  padding-bottom: 56.25%; /* Maintain aspect ratio (16:9) */
+  padding-bottom: 56.25%; 
   position: relative;
 }
 
